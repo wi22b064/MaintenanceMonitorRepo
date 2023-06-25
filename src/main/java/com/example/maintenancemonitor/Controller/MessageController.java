@@ -19,4 +19,10 @@ public class MessageController {
         msg.setMessage(m);
         return "ok";
     }
+
+    @RequestMapping("/api/message/reset")
+    public String reset(){
+        msg.setMessage("Everything works as expected");
+        return "ok";
+    }
 }

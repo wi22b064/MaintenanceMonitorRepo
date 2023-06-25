@@ -20,4 +20,10 @@ public class MessageControllerTest {
         assertEquals(result, "ok");
     }
 
+    @Test
+    void reset(){
+        MessageController controller = new MessageController();
+        String result = controller.reset();
+        assertEquals(result, "ok");
+    }
 }
