@@ -8,18 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MessageController {
     Message msg = new Message();
-
     @RequestMapping("/api/message")
     public String send(){
         return msg.getMessage();
     }
-
     @RequestMapping("/api/message/set")
     public String set(@RequestParam String m){
         msg.setMessage(m);
         return "ok";
     }
-
     @RequestMapping("/api/message/reset")
     public String reset(){
         msg.setMessage("Everything works as expected");
