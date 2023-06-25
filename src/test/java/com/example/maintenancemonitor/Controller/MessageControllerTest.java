@@ -12,4 +12,12 @@ public class MessageControllerTest {
         String result = controller.send();
         assertEquals(result, "Everything works as expected");
     }
+
+    @Test
+    void setMessage(){
+        MessageController controller = new MessageController();
+        String result = controller.set("Service checks: No power until 5:00 pm");
+        assertEquals(result, "ok");
+    }
+
 }
